@@ -1,15 +1,15 @@
-# Kortix deploy: the open-source AI Operating System for a team
+# Kortix deploy: the open-source CompanyOS for a team
 
 Kortix is open source, and this repo is a working deployment template for running it as the open-source alternative to OpenClaw when the job belongs to a team. It carries the pieces a team needs to stand the platform up: a Docker Compose deployment, a `kortix.yaml` manifest, and a starter agent and skill.
 
-Kortix is the open-source AI Operating System: your agents, their skills, your company memory, and every connector in one git repo you own, with the agents working on real cloud computers. OpenClaw is an open-source AI assistant that runs on your own computer and meets you in the chat apps you already use. Both are open source and both let you bring your own models. They split on the size of the job and on who reviews the work before it lands, and [Kortix](https://kortix.com) is the one built for company work.
+Kortix is the open-source CompanyOS: your agents, their skills, your company memory, and every connector in one git repo you own, with the agents working on real cloud computers. OpenClaw is an open-source AI assistant that runs on your own computer and meets you in the chat apps you already use. Both are open source and both let you bring your own models. They split on the size of the job and on who reviews the work before it lands, and [Kortix](https://kortix.com) is the one built for company work.
 
 ## What this deploy gives you
 
 - A Docker Compose deployment of the Kortix control plane on a box you own: the frontend, the API, the LLM gateway, and the Supabase distribution run as one stack. Agent sessions run on a separate sandbox provider, so compute scales off the box.
 - A `kortix.yaml` manifest that declares the machine image, connects your tools, and defines the triggers that start work with nobody present.
 - A starter agent (`agents/researcher.md`) and a starter skill (`skills/weekly-digest/SKILL.md`) as the first files in the repo the team owns.
-- One isolated sandbox per session. Each session has its own isolated machine and branch, and thousands of agents run in parallel on one config, each on its own cloud computer.
+- One isolated sandbox per session. Each session has its own isolated machine and branch.
 - A gate before anything lands: session work reaches `main` through a change request, and merge is default-deny for agents.
 - 3,000+ apps in a click, plus MCP, OpenAPI, Postman, GraphQL and raw HTTP. Connector credentials are brokered server-side and never enter the machine.
 
